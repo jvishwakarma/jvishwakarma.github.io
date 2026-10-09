@@ -13,6 +13,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:84px}
+@media (max-width:640px){.hide-sm{display:none !important}}
 body{margin:0;background:#0A0A0B}
 *{box-sizing:border-box}
 a{color:#8FB0FF}a:hover{color:#C2D3FF}
@@ -22,25 +25,25 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
 .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
 .card-link{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s}
 .card-link:hover{transform:translateY(-4px);border-color:#3A4870 !important}
-@media (prefers-reduced-motion: reduce){.rise,.card-link{animation:none;transition:none}}
+@media (prefers-reduced-motion: reduce){.rise,.card-link{animation:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div style="font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif; background: #0A0A0B; color: #F5F5F4; overflow: hidden">
+<div style="font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif; background: #0A0A0B; color: #F5F5F4; overflow-x: clip">
 
   <!-- Nav -->
-  <header style="position: relative; z-index: 2">
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(10,10,11,0.82); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06)">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
       <a href="./" aria-label="Jagdish Vishwakarma, home" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none">
         <span style="width: 40px; height: 40px; border-radius: 12px; background: #1D4ED8; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; letter-spacing: -0.02em">JV</span>
-        <span style="font-weight: 600; font-size: 15px">Jagdish Vishwakarma</span>
+        <span class="hide-sm" style="font-weight: 600; font-size: 15px">Jagdish Vishwakarma</span>
       </a>
       <nav aria-label="Main" style="display: flex; align-items: center; gap: 28px; font-size: 14px">
         <a href="#work" style="color: #D4D4D8; text-decoration: none">Work</a>
         <a href="#about" style="color: #D4D4D8; text-decoration: none">About</a>
         <a href="#contact" style="color: #D4D4D8; text-decoration: none">Contact</a>
       </nav>
-      <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #D4D4D8; border: 1px solid #26262B; border-radius: 999px; padding: 8px 14px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22C55E; animation: pulse 2.4s infinite"></span>Available for work</span>
+      <span class="hide-sm" style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #D4D4D8; border: 1px solid #26262B; border-radius: 999px; padding: 8px 14px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22C55E; animation: pulse 2.4s infinite"></span>Available for work</span>
     </div>
   </header>
 
