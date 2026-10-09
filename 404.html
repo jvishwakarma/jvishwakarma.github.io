@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Jagdish Vishwakarma</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A0A0B">
+<script>
+// Send any spelling of a case-study address to the right page,
+// e.g. /RiskChecks, /riskchecks.html, /HRAR, /E20/, /RiskChecks.dc.html
+(function () {
+  var key = location.pathname.toLowerCase()
+    .replace(/\.dc\.html$|\.html?$/, '')
+    .replace(/[^a-z0-9]/g, '');
+  var routes = {
+    riskchecks: 'risk-checks.html', riskcheck: 'risk-checks.html', internalriskchecks: 'risk-checks.html', risk: 'risk-checks.html',
+    hrar: 'hrar.html', hrarplatform: 'hrar.html',
+    e20: 'e20.html', e20digitalbusinessbank: 'e20.html',
+    main: '', home: '', index: '', work: ''
+  };
+  if (Object.prototype.hasOwnProperty.call(routes, key)) {
+    location.replace('/' + routes[key] + location.hash);
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0A0B;color:#F5F5F4;font-family:'Plus Jakarta Sans','Segoe UI',sans-serif}
+a:focus-visible{outline:2px solid #6E95FF;outline-offset:3px}
+</style>
+</head>
+<body>
+<main style="min-height: 100vh; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center">
+  <span style="font-size: 14px; letter-spacing: 0.14em; color: #8FB0FF">404</span>
+  <h1 style="margin: 0; font-size: clamp(40px, 7vw, 80px); line-height: 1; font-weight: 700; letter-spacing: -0.04em">This page <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">moved.</span></h1>
+  <p style="margin: 0; max-width: 460px; font-size: 18px; line-height: 1.6; color: #A1A1AA">Pick a case study below, or head back to the home page.</p>
+  <nav aria-label="Case studies" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
+    <a href="/" style="min-height: 48px; padding: 0 22px; border-radius: 12px; background: #FFFFFF; color: #0A0A0B; text-decoration: none; font-weight: 600; display: flex; align-items: center">Home</a>
+    <a href="/risk-checks.html" style="min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid #2E2E34; color: #FFFFFF; text-decoration: none; display: flex; align-items: center">Internal Risk Checks</a>
+    <a href="/hrar.html" style="min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid #2E2E34; color: #FFFFFF; text-decoration: none; display: flex; align-items: center">HRAR Platform</a>
+    <a href="/e20.html" style="min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid #2E2E34; color: #FFFFFF; text-decoration: none; display: flex; align-items: center">E20</a>
+  </nav>
+</main>
+</body>
+</html>
