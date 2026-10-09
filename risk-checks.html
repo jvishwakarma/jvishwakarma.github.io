@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internal Risk Checks — Case Study · Jagdish Vishwakarma</title>
+<meta name="description" content="Redesigning sanctions screening in business onboarding, with a playable demo of the review flow.">
+<meta property="og:title" content="Internal Risk Checks — Case Study · Jagdish Vishwakarma">
+<meta property="og:description" content="Redesigning sanctions screening in business onboarding, with a playable demo of the review flow.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231D4ED8'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0A0B}
+*{box-sizing:border-box}
+a{color:#8FB0FF}a:hover{color:#C2D3FF}
+a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3px}
+button{font-family:inherit}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion: reduce){.rise{animation:none}}
+</style>
+</head>
+<body>
+<div style="font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif; background: #0A0A0B; color: #F5F5F4; overflow: hidden">
+
+  <!-- Nav -->
+  <header>
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+      <a href="./" style="display: flex; align-items: center; gap: 10px; color: #D4D4D8; text-decoration: none; font-size: 14px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+        All work
+      </a>
+      <a href="./" aria-label="Home" style="width: 40px; height: 40px; border-radius: 12px; background: #1D4ED8; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px">JV</a>
+      <a href="hrar.html" style="display: flex; align-items: center; gap: 10px; color: #D4D4D8; text-decoration: none; font-size: 14px">Next: HRAR
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="position: relative">
+    <div aria-hidden="true" style="position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1100px; height: 700px; border-radius: 50%; background: radial-gradient(closest-side, rgba(29,78,216,0.30), rgba(29,78,216,0) 70%); pointer-events: none"></div>
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 96px 24px 64px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+      <span class="rise" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px">
+        <span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #1D4ED8; border-radius: 999px; padding: 6px 14px">Case study 03</span>
+        <span style="font-size: 12px; color: #D4D4D8; border: 1px solid #2E2E34; border-radius: 999px; padding: 6px 14px">Compliance · Staff tool · Web</span>
+      </span>
+      <h1 class="rise" style="animation-delay: .08s; margin: 0; font-size: clamp(48px, 8vw, 112px); line-height: 0.98; font-weight: 700; letter-spacing: -0.045em; text-wrap: balance">Internal Risk <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">Checks</span></h1>
+      <p class="rise" style="animation-delay: .16s; margin: 0; max-width: 680px; font-size: 20px; line-height: 1.6; color: #A1A1AA; text-wrap: pretty">Redesigning sanctions screening in business onboarding, so reviewers clear hits quickly, can't approve by mistake, and can defend every call to an auditor.</p>
+    </div>
+
+    <!-- Product shot -->
+    <div class="rise" style="animation-delay: .24s; position: relative; max-width: 1240px; margin: 0 auto; padding: 0 24px">
+      <div style="background: linear-gradient(160deg, #13235A 0%, #0B1638 100%); border: 1px solid #1B2A4E; border-radius: 28px; padding: clamp(16px, 4vw, 56px) clamp(16px, 4vw, 56px) 0; overflow: hidden">
+        <div style="background: #F3F5FA; border-radius: 14px 14px 0 0; overflow: hidden; color: #111827; font-size: 13px; box-shadow: 0 -10px 80px rgba(0,0,0,0.4)">
+          <div style="height: 52px; background: #FFFFFF; border-bottom: 1px solid #E3E6EF; display: flex; align-items: center; justify-content: space-between; padding: 0 20px">
+            <span style="display: flex; align-items: center; gap: 12px"><span style="width: 64px; height: 22px; border: 1px dashed #A3ACCB; border-radius: 4px"></span><span style="font-weight: 600; color: #182F7C">Business onboarding</span></span>
+            <span style="width: 26px; height: 26px; border-radius: 50%; background: #182F7C"></span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap">
+            <div style="flex: 0 0 200px; background: #FFFFFF; border-right: 1px solid #E3E6EF; padding: 16px 12px; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: #6B7280; padding: 4px 10px">APPLICATION</span>
+              <span style="background: #EDF2FF; color: #182F7C; border-radius: 6px; padding: 10px; font-weight: 500; display: flex; justify-content: space-between">Company details <span style="background: #9D0000; color: #FFFFFF; border-radius: 99px; padding: 0 7px; font-size: 11px">3</span></span>
+              <span style="padding: 10px; color: #374151">Stakeholders</span>
+              <span style="padding: 10px; color: #374151">Documents</span>
+              <span style="padding: 10px; color: #374151">Request for information</span>
+              <span style="padding: 10px; color: #374151">Audit trail</span>
+            </div>
+            <div style="flex: 999 1 560px; min-width: 0">
+              <div style="background: #FFFFFF; border-bottom: 1px solid #E3E6EF; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: flex-end">
+                <div style="display: flex; flex-direction: column; gap: 4px">
+                  <span style="color: #4B5563">Applications / Internal risk checks</span>
+                  <span style="display: flex; align-items: center; gap: 10px"><strong style="font-size: 22px; color: #0B1640">Harbour Line Trading LLC</strong><span style="font-size: 11px; font-weight: 600; color: #8A4B00; background: #FFF1DB; border-radius: 999px; padding: 3px 9px">In review</span></span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px">
+                  <div style="display: flex; gap: 6px; flex-wrap: wrap">
+                    <span style="padding: 9px 14px; border-radius: 8px; border: 1px solid #E8C4C4; color: #9D0000; font-weight: 500">Decline</span>
+                    <span style="padding: 9px 14px; border-radius: 8px; border: 1px solid #D3D7E7; color: #182F7C; font-weight: 500">Return to sourcing</span>
+                    <span style="padding: 9px 14px; border-radius: 8px; background: #E3E6EF; color: #6B7280; font-weight: 500">Approve</span>
+                  </div>
+                  <span style="font-size: 12px; color: #4B5563">Resolve 3 pending hits to approve</span>
+                </div>
+              </div>
+              <div style="padding: 16px 24px 0">
+                <div style="background: #FFFFFF; border: 1px solid #E3E6EF; border-radius: 10px; padding: 14px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px">
+                  <strong style="font-size: 15px; color: #0B1640">2 of 5 hits resolved</strong>
+                  <span style="flex: 1 1 160px; height: 7px; background: #EAECF3; border-radius: 99px; overflow: hidden; display: flex"><span style="width: 40%; background: #182F7C"></span></span>
+                  <span style="color: #374151">True match 0 · False positive 2 · Pending 3</span>
+                </div>
+              </div>
+              <div style="padding: 16px 24px 28px; display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+                <div style="flex: 2 1 360px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E6EF; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+                  <strong style="font-size: 15px; color: #0B1640; padding: 2px 2px 6px">Screening hits</strong>
+                  <div style="border: 1px solid #E3E6EF; border-radius: 8px; padding: 12px; display: flex; justify-content: space-between; align-items: center; gap: 8px"><span>1 · Omar K. Haddad</span><span style="font-weight: 600; color: #1E6B2A; background: #E6F2E8; border-radius: 99px; padding: 2px 9px">False positive</span></div>
+                  <div style="border: 1px solid #9FB0E0; border-radius: 8px; padding: 12px; box-shadow: 0 2px 10px rgba(24,47,124,0.08); display: flex; flex-direction: column; gap: 10px">
+                    <span style="display: flex; justify-content: space-between; gap: 8px"><span>2 · Sara N. Malik · <span style="color: #8A1C1C; background: #F3E6E6; border-radius: 3px; padding: 1px 6px">Name</span> <span style="color: #8A1C1C; background: #F3E6E6; border-radius: 3px; padding: 1px 6px">Place</span></span><span style="font-weight: 600; color: #374151; background: #EEF0F5; border-radius: 99px; padding: 2px 9px">Pending</span></span>
+                    <span style="background: #F8F9FC; border-radius: 6px; padding: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; color: #4B5563"><span>List · Sanctions</span><span>Type · Individual</span><span>Matching text · O. Haddad</span><span>Name in question · Omar Haddad</span></span>
+                    <span style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap"><span style="color: #374151; font-weight: 500">Your call on this hit</span><span style="border: 1px solid #D3D7E7; border-radius: 6px; padding: 6px 12px">True match</span><span style="border: 1px solid #D3D7E7; border-radius: 6px; padding: 6px 12px">False positive</span></span>
+                  </div>
+                  <div style="border: 1px solid #E3E6EF; border-radius: 8px; padding: 12px; display: flex; justify-content: space-between"><span>3 · Ahmed Saeed</span><span style="font-weight: 600; color: #374151; background: #EEF0F5; border-radius: 99px; padding: 2px 9px">Pending</span></div>
+                </div>
+                <div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E6EF; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+                  <strong style="font-size: 15px; color: #0B1640">Screening decision</strong>
+                  <span style="color: #4B5563">3 hits still pending, outcome is provisional</span>
+                  <span style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px"><span style="border: 1px solid #D3D7E7; border-radius: 6px; padding: 9px">True positive</span><span style="border: 1px solid #182F7C; background: #F4F7FE; color: #182F7C; border-radius: 6px; padding: 9px">False positive</span></span>
+                  <span style="font-weight: 500">Comment *</span>
+                  <span style="height: 60px; border: 1px solid #C9CEDD; border-radius: 6px"></span>
+                  <span style="border: 1px dashed #A3ACCB; border-radius: 6px; padding: 10px; color: #4B5563">Attach evidence</span>
+                  <span style="background: #182F7C; color: #FFFFFF; border-radius: 6px; padding: 10px; text-align: center; font-weight: 500">Save decision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="margin: 14px 0 0; font-size: 13px; color: #8B8B93; text-align: center">The redesigned review screen. Customer and hit data anonymised.</p>
+    </div>
+  </section>
+
+  <!-- Meta -->
+  <section>
+    <dl style="max-width: 1240px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 28px">
+      <div style="border-top: 1px solid #26262B; padding-top: 18px; display: flex; flex-direction: column; gap: 8px"><dt style="font-size: 12px; letter-spacing: 0.14em; color: #8B8B93">ROLE</dt><dd style="margin: 0; font-size: 16px">Lead Product Designer</dd></div>
+      <div style="border-top: 1px solid #26262B; padding-top: 18px; display: flex; flex-direction: column; gap: 8px"><dt style="font-size: 12px; letter-spacing: 0.14em; color: #8B8B93">PRODUCT</dt><dd style="margin: 0; font-size: 16px">Business onboarding staff portal</dd></div>
+      <div style="border-top: 1px solid #26262B; padding-top: 18px; display: flex; flex-direction: column; gap: 8px"><dt style="font-size: 12px; letter-spacing: 0.14em; color: #8B8B93">TIMELINE</dt><dd style="margin: 0; font-size: 16px">1 Month · 2026</dd></div>
+    </dl>
+  </section>
+
+  <!-- Context -->
+  <section>
+    <div style="max-width: 1240px; margin: 0 auto; padding: 24px 24px 120px; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-wrap: wrap; gap: 32px 64px">
+        <h2 style="flex: 1 1 380px; margin: 0; font-size: clamp(34px, 4.4vw, 54px); line-height: 1.04; font-weight: 700; letter-spacing: -0.035em">The last gate before an account <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">opens</span></h2>
+        <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 18px; font-size: 17px; line-height: 1.75; color: #A1A1AA">
+          <p style="margin: 0">After a business submits its application, staff screen the company and its people against sanctions and watchlist data from World-Check. Each application can return several hits.</p>
+          <p style="margin: 0">Most are false positives: a shared name, a common city. But each one needs a recorded decision, and a single missed true match is a regulatory failure. Slow reviews, meanwhile, leave a customer waiting days for an account.</p>
+        </div>
+      </div>
+      <ol aria-label="Business onboarding journey" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">Application hub</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">Company details</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">Counterparties</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">Financials</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">Stakeholders</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">Review &amp; submit</li>
+        <li style="font-size: 14px; font-weight: 600; color: #FFFFFF; background: #1D4ED8; border-radius: 10px; padding: 12px 16px">Internal risk checks</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">CPV</li>
+        <li style="font-size: 14px; color: #A1A1AA; border: 1px solid #26262B; border-radius: 10px; padding: 12px 16px">RFI</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section style="background: #F4F3EF; color: #0A0A0B">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 820px">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #1D4ED8">THE PROBLEM</span>
+        <h2 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">Five hits, one decision, <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #1D4ED8">zero</span> room for error.</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #52525B">Sessions with reviewers surfaced three needs the screen had to meet.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px">
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: #1D4ED8">01</span>
+          <h3 style="margin: 0; font-size: 21px; font-weight: 600">"Where am I?"</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #52525B">Reviewers jump between applications all day. They need to see instantly how many hits are left and what they already decided.</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: #1D4ED8">02</span>
+          <h3 style="margin: 0; font-size: 21px; font-weight: 600">"Why did this match?"</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #52525B">A hit is only as useful as its reason. Name, place and date-of-birth matches carry very different weight.</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: #1D4ED8">03</span>
+          <h3 style="margin: 0; font-size: 21px; font-weight: 600">"Can I prove it later?"</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #52525B">Approving with an open hit, or over a true match, must be impossible, and every outcome needs a reason an auditor can read.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive demo -->
+  <section style="position: relative; background: #050D24">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background-image: radial-gradient(#1B2A4E 1px, transparent 1px); background-size: 28px 28px; opacity: .6; pointer-events: none"></div>
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-wrap: wrap; gap: 24px 64px; justify-content: space-between; align-items: flex-end">
+        <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 18px">
+          <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #8FB0FF">TRY IT</span>
+          <h2 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">Clear the hits <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">yourself</span></h2>
+        </div>
+        <p style="flex: 1 1 360px; margin: 0; font-size: 16px; line-height: 1.7; color: #A1A1AA">Resolve each hit and watch progress, the decision summary and the Approve gate react. Mark one as a true match to see approval lock.</p>
+      </div>
+
+      <div id="demo" style="background: #F3F5FA; border-radius: 20px; color: #111827; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decisions -->
+  <section style="background: #F4F3EF; color: #0A0A0B">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-direction: column; gap: 96px">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 820px">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #1D4ED8">KEY DECISIONS</span>
+        <h2 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">From checklist to <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #1D4ED8">guided</span> review.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 48px; align-items: center">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; color: #1D4ED8">01 — Progress at a glance</span>
+          <h3 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em">One strip answers "how much is left?"</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #52525B">Resolved count, a progress bar and a tally of true matches, false positives and pending hits sit above the list. The pending count also badges the side navigation, so a returning reviewer knows the state in one look.</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 50px rgba(10,10,11,0.06)">
+          <span style="font-size: 12px; color: #4B5563">Screening review</span>
+          <span style="font-size: 22px; font-weight: 600; color: #0B1640">3 of 5 hits resolved</span>
+          <span style="height: 8px; background: #EAECF3; border-radius: 99px; overflow: hidden; display: flex"><span style="width: 60%; background: #182F7C"></span></span>
+          <span style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #374151">
+            <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #9D0000"></span>True match 0</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1E6B2A"></span>False positive 3</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A3ACCB"></span>Pending 2</span>
+          </span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 48px; align-items: center">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; color: #1D4ED8">02 — One hit in focus</span>
+          <h3 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em">Decide, and the next pending hit opens</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #52525B">Each hit leads with "Matched on" tags, so the reason for the match is read first. A call collapses the card and opens the next pending hit, and a "Next pending hit" shortcut jumps straight there.</p>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #9FB0E0; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 50px rgba(24,47,124,0.10)">
+          <span style="display: flex; justify-content: space-between; gap: 10px; align-items: flex-start">
+            <span style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 16px">Omar K. Haddad</strong><span style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap"><span style="font-size: 12px; color: #4B5563">Matched on</span><span style="font-size: 12px; font-weight: 500; color: #8A1C1C; background: #F3E6E6; border-radius: 4px; padding: 3px 8px">Name</span><span style="font-size: 12px; font-weight: 500; color: #8A1C1C; background: #F3E6E6; border-radius: 4px; padding: 3px 8px">Date of birth</span></span></span>
+            <span style="font-size: 12px; font-weight: 600; color: #374151; background: #EEF0F5; border-radius: 99px; padding: 4px 10px">Pending</span>
+          </span>
+          <span style="display: flex; gap: 8px; flex-wrap: wrap"><span style="height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #D3D7E7; font-size: 13px; display: flex; align-items: center">True match</span><span style="height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #1E6B2A; background: #E6F2E8; color: #1E6B2A; font-size: 13px; display: flex; align-items: center">False positive</span></span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 48px; align-items: center">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; color: #1D4ED8">03 — Approval that explains itself</span>
+          <h3 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em">A locked button that tells you why</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #52525B">Approve stays disabled until every hit is resolved and none is a true match. Instead of a silent grey button, a line underneath states exactly what's missing. Decline and Return to sourcing stay available throughout.</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 28px 36px; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(10,10,11,0.06)">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 18px 0; border-bottom: 1px solid #EEF0F5"><span style="font-size: 14px; color: #4B5563">Resolve 2 pending hits to approve</span><span style="height: 44px; padding: 0 18px; border-radius: 8px; background: #E3E6EF; color: #6B7280; font-size: 14px; font-weight: 500; display: flex; align-items: center">Approve</span></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 18px 0; border-bottom: 1px solid #EEF0F5"><span style="font-size: 14px; color: #9D0000; font-weight: 500">A true match blocks approval</span><span style="height: 44px; padding: 0 18px; border-radius: 8px; background: #E3E6EF; color: #6B7280; font-size: 14px; font-weight: 500; display: flex; align-items: center">Approve</span></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 18px 0"><span style="font-size: 14px; color: #1E6B2A; font-weight: 500">Ready to approve</span><span style="height: 44px; padding: 0 18px; border-radius: 8px; background: #1E6B2A; color: #FFFFFF; font-size: 14px; font-weight: 500; display: flex; align-items: center">Approve</span></div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 48px; align-items: center">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; color: #1D4ED8">04 — Every call on the record</span>
+          <h3 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em">The reasoning lives next to the decision</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #52525B">The decision panel pairs the overall outcome with a required comment and an evidence upload, saved straight to the audit trail. It mirrors the hit list ("3 hits still pending, outcome is provisional") so nobody commits to an outcome the evidence doesn't support yet.</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 50px rgba(10,10,11,0.06)">
+          <strong style="font-size: 18px; color: #0B1640">Screening decision</strong>
+          <span style="font-size: 13px; color: #4B5563">All hits cleared as false positives</span>
+          <span style="font-size: 14px; font-weight: 500">Comment <span style="color: #9D0000">*</span></span>
+          <span style="min-height: 72px; border: 1px solid #C9CEDD; border-radius: 8px; padding: 12px; font-size: 14px; color: #6B7280">Explain why the hits were cleared or confirmed</span>
+          <span style="border: 1px dashed #A3ACCB; border-radius: 8px; padding: 14px; font-size: 14px; color: #4B5563">Attach evidence · PDF, JPG or PNG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System + a11y -->
+  <section style="background: #0A0A0B">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 24px">
+      <div style="background: #111114; border: 1px solid #222228; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 18px">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #8FB0FF">DESIGN SYSTEM</span>
+        <h2 style="margin: 0; font-size: 32px; line-height: 1.15; font-weight: 700; letter-spacing: -0.025em">Built on the bank's corporate UI</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #A1A1AA">Every element maps to the existing corporate-ui library (built on MUI), so engineering shipped with components they already maintain.</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: #D4D4D8">
+          <li style="display: flex; gap: 12px"><span style="color: #8FB0FF">—</span>Secondary, destructive and affirmative buttons for the three outcomes</li>
+          <li style="display: flex; gap: 12px"><span style="color: #8FB0FF">—</span>Brand colour tokens and the web type scale</li>
+          <li style="display: flex; gap: 12px"><span style="color: #8FB0FF">—</span>Core spacing scale from 2 to 80 px</li>
+        </ul>
+      </div>
+      <div style="background: #111114; border: 1px solid #222228; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 18px">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #8FB0FF">ACCESSIBILITY</span>
+        <h2 style="margin: 0; font-size: 32px; line-height: 1.15; font-weight: 700; letter-spacing: -0.025em">Usable by every reviewer</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #A1A1AA">A tool used all day by compliance staff has to work with a keyboard and a screen reader, not just a mouse.</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: #D4D4D8">
+          <li style="display: flex; gap: 12px"><span style="color: #8FB0FF">—</span>Status never relies on colour alone: every chip has a text label</li>
+          <li style="display: flex; gap: 12px"><span style="color: #8FB0FF">—</span>44 px minimum targets on decision buttons</li>
+          <li style="display: flex; gap: 12px"><span style="color: #8FB0FF">—</span>Expandable hits and toggle decisions announce their state</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section style="background: #0A0A0B">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px 120px; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 820px">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #8FB0FF">OUTCOME</span>
+        <h2 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">Faster, <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">safer</span> screening.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 0; border-top: 1px solid #26262B">
+        <div style="padding: 36px 28px 0 0; display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; color: #FFFFFF">0</span>
+          <span style="font-size: 17px; font-weight: 600">Approvals with an open hit</span>
+          <span style="font-size: 15px; line-height: 1.65; color: #A1A1AA">Blocked by design: Approve only unlocks once every hit is resolved.</span>
+        </div>
+        <div style="padding: 36px 28px 0 0; display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; color: #FFFFFF">100%</span>
+          <span style="font-size: 17px; font-weight: 600">Decisions with a reason</span>
+          <span style="font-size: 15px; line-height: 1.65; color: #A1A1AA">A comment is required before a screening decision can be saved.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next -->
+  <a href="hrar.html" style="display: block; text-decoration: none; color: inherit; background: #050D24; border-top: 1px solid #16224A">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center">
+      <span style="display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 14px; color: #A1A1AA">Next case study</span>
+        <span style="font-size: clamp(40px, 6vw, 80px); line-height: 1; font-weight: 700; letter-spacing: -0.04em; color: #FFFFFF">HRAR <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">Platform</span></span>
+      </span>
+      <span style="width: 72px; height: 72px; border-radius: 50%; background: #FFFFFF; color: #0A0A0B; display: flex; align-items: center; justify-content: center">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </span>
+    </div>
+  </a>
+</div>
+<script src="assets/demo.js"></script>
+</body>
+</html>
