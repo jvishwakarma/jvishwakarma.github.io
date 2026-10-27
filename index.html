@@ -27,6 +27,8 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
 .card-link{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s}
 .card-link:hover{transform:translateY(-4px);border-color:#3A4870 !important}
 .reel-tile{flex:none;width:44cqh;height:100%;border-radius:2.4cqh;overflow:hidden;padding:3cqh;display:flex;flex-direction:column;justify-content:flex-end;gap:1cqh}
+.reel-label{margin-bottom:auto;font-size:2cqh;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+@keyframes m-scrub{from{width:0}to{width:100%}}
 @media (prefers-reduced-motion: reduce){.rise,.card-link{animation:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -167,22 +169,25 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
       <div>
         <figure class="slot grain" style="aspect-ratio: 16 / 9; border-radius: 24px">
           <div class="slot-comp" aria-hidden="true" style="background: radial-gradient(110% 90% at 50% 120%, #13235A 0%, #0A0A0B 65%)">
-            <div class="m-pan-track" style="position: absolute; top: 16cqh; left: 0; height: 52cqh; display: flex; gap: 3cqh; width: max-content; padding-right: 3cqh; animation: m-pan 24s linear infinite">
+            <div class="m-pan-track" style="position: absolute; top: 10cqh; left: 0; height: 56cqh; display: flex; gap: 3cqh; width: max-content; padding-right: 3cqh; animation: m-pan 24s linear infinite">
               <!-- tiles, repeated twice for a seamless loop -->
-              <span class="reel-tile" style="background: linear-gradient(160deg, #13235A, #0B1638)"><span style="background: #F3F5FA; color: #0B1640; border-radius: 1.4cqh; padding: 2cqh; display: flex; flex-direction: column; gap: 1.4cqh; font-size: 2cqh; width: 100%"><b>5 of 5 hits resolved</b><i style="height: 1cqh; background: #182F7C; border-radius: 99px"></i><span>Omar K. Haddad · <b style="color: #1E6B2A">False positive</b></span></span></span>
-              <span class="reel-tile" style="background: linear-gradient(150deg, #E0453A, #9E2219); color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">70%</b><span style="font-size: 2.4cqh">faster onboarding</span></span>
-              <span class="reel-tile" style="background: #1A1D27"><img src="assets/hrar-laptop-review.png" alt="" style="width: 100%; display: block"></span>
-              <span class="reel-tile" style="background: #F4F3EF; color: #0A0A0B"><b style="font-size: 6cqh; letter-spacing: -.04em; line-height: 1">Open by <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #B4291F">lunch.</span></b></span>
-              <span class="reel-tile" style="background: #101013; border: 1px solid #2E2E34; color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">3×</b><span style="font-size: 2.4cqh; color: #A1A1AA">faster decisions on HRAR</span></span>
-              <span class="reel-tile" style="background: linear-gradient(160deg, #13235A, #0B1638)"><span style="background: #F3F5FA; color: #0B1640; border-radius: 1.4cqh; padding: 2cqh; display: flex; flex-direction: column; gap: 1.4cqh; font-size: 2cqh; width: 100%"><b>5 of 5 hits resolved</b><i style="height: 1cqh; background: #182F7C; border-radius: 99px"></i><span>Omar K. Haddad · <b style="color: #1E6B2A">False positive</b></span></span></span>
-              <span class="reel-tile" style="background: linear-gradient(150deg, #E0453A, #9E2219); color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">70%</b><span style="font-size: 2.4cqh">faster onboarding</span></span>
-              <span class="reel-tile" style="background: #1A1D27"><img src="assets/hrar-laptop-review.png" alt="" style="width: 100%; display: block"></span>
-              <span class="reel-tile" style="background: #F4F3EF; color: #0A0A0B"><b style="font-size: 6cqh; letter-spacing: -.04em; line-height: 1">Open by <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #B4291F">lunch.</span></b></span>
-              <span class="reel-tile" style="background: #101013; border: 1px solid #2E2E34; color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">3×</b><span style="font-size: 2.4cqh; color: #A1A1AA">faster decisions on HRAR</span></span>
+              <span class="reel-tile" style="background: linear-gradient(160deg, #13235A, #0B1638);"><span class="reel-label" style="color: #8FB0FF">Risk Checks</span><span style="background: #F3F5FA; color: #0B1640; border-radius: 1.4cqh; padding: 2cqh; display: flex; flex-direction: column; gap: 1.4cqh; font-size: 2cqh; width: 100%"><b>5 of 5 hits resolved</b><i style="height: 1cqh; background: #182F7C; border-radius: 99px"></i><span>Omar K. Haddad · <b style="color: #1E6B2A">False positive</b></span></span></span>
+              <span class="reel-tile" style="background: linear-gradient(150deg, #E0453A, #9E2219);"><span class="reel-label" style="color: #FFE1DE">E20</span><b style="font-size: 13cqh; letter-spacing: -.06em; line-height: .9; color: #FFFFFF">70%</b><span style="font-size: 2.4cqh; color: #FFFFFF">faster onboarding</span></span>
+              <span class="reel-tile" style="background: #1A1D27; justify-content: space-between;"><span class="reel-label" style="color: #A1A1AA">HRAR</span><img src="assets/hrar-laptop-review.png" alt="" style="width: 112%; max-width: none; margin: 0 -6%; display: block"></span>
+              <span class="reel-tile" style="background: #F4F3EF;"><span class="reel-label" style="color: #B4291F">E20</span><b style="font-size: 7cqh; letter-spacing: -.04em; line-height: 1; color: #0A0A0B">Open by <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #B4291F">lunch.</span></b></span>
+              <span class="reel-tile" style="background: #101013; border: 1px solid #2E2E34;"><span class="reel-label" style="color: #8B8B93">HRAR</span><b style="font-size: 13cqh; letter-spacing: -.06em; line-height: .9; color: #FFFFFF">3×</b><span style="font-size: 2.4cqh; color: #A1A1AA">faster decisions</span></span>
+              <span class="reel-tile" style="background: linear-gradient(160deg, #13235A, #0B1638);"><span class="reel-label" style="color: #8FB0FF">Risk Checks</span><span style="background: #F3F5FA; color: #0B1640; border-radius: 1.4cqh; padding: 2cqh; display: flex; flex-direction: column; gap: 1.4cqh; font-size: 2cqh; width: 100%"><b>5 of 5 hits resolved</b><i style="height: 1cqh; background: #182F7C; border-radius: 99px"></i><span>Omar K. Haddad · <b style="color: #1E6B2A">False positive</b></span></span></span>
+              <span class="reel-tile" style="background: linear-gradient(150deg, #E0453A, #9E2219);"><span class="reel-label" style="color: #FFE1DE">E20</span><b style="font-size: 13cqh; letter-spacing: -.06em; line-height: .9; color: #FFFFFF">70%</b><span style="font-size: 2.4cqh; color: #FFFFFF">faster onboarding</span></span>
+              <span class="reel-tile" style="background: #1A1D27; justify-content: space-between;"><span class="reel-label" style="color: #A1A1AA">HRAR</span><img src="assets/hrar-laptop-review.png" alt="" style="width: 112%; max-width: none; margin: 0 -6%; display: block"></span>
+              <span class="reel-tile" style="background: #F4F3EF;"><span class="reel-label" style="color: #B4291F">E20</span><b style="font-size: 7cqh; letter-spacing: -.04em; line-height: 1; color: #0A0A0B">Open by <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #B4291F">lunch.</span></b></span>
+              <span class="reel-tile" style="background: #101013; border: 1px solid #2E2E34;"><span class="reel-label" style="color: #8B8B93">HRAR</span><b style="font-size: 13cqh; letter-spacing: -.06em; line-height: .9; color: #FFFFFF">3×</b><span style="font-size: 2.4cqh; color: #A1A1AA">faster decisions</span></span>
             </div>
-            <div style="position: absolute; left: 5cqw; right: 5cqw; bottom: 7cqh; display: flex; justify-content: space-between; align-items: flex-end; gap: 3cqw">
-              <span style="font-size: 7cqh; line-height: 1; font-weight: 700; letter-spacing: -.04em; color: #FFFFFF">Showreel <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">2026</span></span>
-              <span style="font-size: 2.4cqh; color: #A1A1AA">Product · Motion · Launch</span>
+            <div style="position: absolute; left: 5cqw; right: 5cqw; bottom: 7cqh; display: flex; flex-direction: column; gap: 3cqh">
+              <span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 3cqw">
+                <span style="font-size: 7cqh; line-height: 1; font-weight: 700; letter-spacing: -.04em; color: #FFFFFF">Showreel <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">2026</span></span>
+                <span style="font: 500 2.4cqh/1 ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; color: #A1A1AA">0:58</span>
+              </span>
+              <span style="height: max(2px, .5cqh); background: rgba(255,255,255,.14); border-radius: 99px; display: flex; overflow: hidden"><i class="m-loop" style="display: block; width: 100%; background: #8FB0FF; border-radius: 99px; animation: m-scrub 24s linear infinite"></i></span>
             </div>
           </div>
           <video class="slot-video" data-src="assets/motion/showreel.mp4" data-controls aria-label="Showreel 2026"></video>
