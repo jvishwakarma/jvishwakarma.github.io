@@ -12,6 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231D4ED8'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/motion.css">
 <style>
 html{scroll-behavior:smooth}
 [id]{scroll-margin-top:84px}
@@ -25,6 +26,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
 .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
 .card-link{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s}
 .card-link:hover{transform:translateY(-4px);border-color:#3A4870 !important}
+.reel-tile{flex:none;width:44cqh;height:100%;border-radius:2.4cqh;overflow:hidden;padding:3cqh;display:flex;flex-direction:column;justify-content:flex-end;gap:1cqh}
 @media (prefers-reduced-motion: reduce){.rise,.card-link{animation:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -40,6 +42,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
       </a>
       <nav aria-label="Main" style="display: flex; align-items: center; gap: 28px; font-size: 14px">
         <a href="#work" style="color: #D4D4D8; text-decoration: none">Work</a>
+        <a href="#motion" style="color: #D4D4D8; text-decoration: none">Motion</a>
         <a href="#about" style="color: #D4D4D8; text-decoration: none">About</a>
         <a href="#contact" style="color: #D4D4D8; text-decoration: none">Contact</a>
       </nav>
@@ -152,6 +155,118 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
     </div>
   </section>
 
+  <!-- Motion & Launch -->
+  <section id="motion" style="background: #0A0A0B; border-top: 1px solid #16161A">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 104px 24px 120px; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+        <h2 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1; font-weight: 700; letter-spacing: -0.035em">Motion &amp; <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">launch</span></h2>
+        <span style="font-size: 15px; color: #A1A1AA">Launch campaigns · UI animation · Social</span>
+      </div>
+
+      <!-- Showreel -->
+      <div>
+        <figure class="slot grain" style="aspect-ratio: 16 / 9; border-radius: 24px">
+          <div class="slot-comp" aria-hidden="true" style="background: radial-gradient(110% 90% at 50% 120%, #13235A 0%, #0A0A0B 65%)">
+            <div class="m-pan-track" style="position: absolute; top: 16cqh; left: 0; height: 52cqh; display: flex; gap: 3cqh; width: max-content; padding-right: 3cqh; animation: m-pan 24s linear infinite">
+              <!-- tiles, repeated twice for a seamless loop -->
+              <span class="reel-tile" style="background: linear-gradient(160deg, #13235A, #0B1638)"><span style="background: #F3F5FA; color: #0B1640; border-radius: 1.4cqh; padding: 2cqh; display: flex; flex-direction: column; gap: 1.4cqh; font-size: 2cqh; width: 100%"><b>5 of 5 hits resolved</b><i style="height: 1cqh; background: #182F7C; border-radius: 99px"></i><span>Omar K. Haddad · <b style="color: #1E6B2A">False positive</b></span></span></span>
+              <span class="reel-tile" style="background: linear-gradient(150deg, #E0453A, #9E2219); color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">70%</b><span style="font-size: 2.4cqh">faster onboarding</span></span>
+              <span class="reel-tile" style="background: #1A1D27"><img src="assets/hrar-laptop-review.png" alt="" style="width: 100%; display: block"></span>
+              <span class="reel-tile" style="background: #F4F3EF; color: #0A0A0B"><b style="font-size: 6cqh; letter-spacing: -.04em; line-height: 1">Open by <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #B4291F">lunch.</span></b></span>
+              <span class="reel-tile" style="background: #101013; border: 1px solid #2E2E34; color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">3×</b><span style="font-size: 2.4cqh; color: #A1A1AA">faster decisions on HRAR</span></span>
+              <span class="reel-tile" style="background: linear-gradient(160deg, #13235A, #0B1638)"><span style="background: #F3F5FA; color: #0B1640; border-radius: 1.4cqh; padding: 2cqh; display: flex; flex-direction: column; gap: 1.4cqh; font-size: 2cqh; width: 100%"><b>5 of 5 hits resolved</b><i style="height: 1cqh; background: #182F7C; border-radius: 99px"></i><span>Omar K. Haddad · <b style="color: #1E6B2A">False positive</b></span></span></span>
+              <span class="reel-tile" style="background: linear-gradient(150deg, #E0453A, #9E2219); color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">70%</b><span style="font-size: 2.4cqh">faster onboarding</span></span>
+              <span class="reel-tile" style="background: #1A1D27"><img src="assets/hrar-laptop-review.png" alt="" style="width: 100%; display: block"></span>
+              <span class="reel-tile" style="background: #F4F3EF; color: #0A0A0B"><b style="font-size: 6cqh; letter-spacing: -.04em; line-height: 1">Open by <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #B4291F">lunch.</span></b></span>
+              <span class="reel-tile" style="background: #101013; border: 1px solid #2E2E34; color: #FFFFFF"><b style="font-size: 12cqh; letter-spacing: -.06em; line-height: .9">3×</b><span style="font-size: 2.4cqh; color: #A1A1AA">faster decisions on HRAR</span></span>
+            </div>
+            <div style="position: absolute; left: 5cqw; right: 5cqw; bottom: 7cqh; display: flex; justify-content: space-between; align-items: flex-end; gap: 3cqw">
+              <span style="font-size: 7cqh; line-height: 1; font-weight: 700; letter-spacing: -.04em; color: #FFFFFF">Showreel <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #8FB0FF">2026</span></span>
+              <span style="font-size: 2.4cqh; color: #A1A1AA">Product · Motion · Launch</span>
+            </div>
+          </div>
+          <video class="slot-video" data-src="assets/motion/showreel.mp4" data-controls aria-label="Showreel 2026"></video>
+          <span class="slot-tag">assets/motion/showreel.mp4 · 16:9 · 1920×1080 · 45–60s</span>
+        </figure>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 24px">
+        <!-- E20 launch -->
+        <a href="e20-launch.html" class="card-link" style="display: flex; flex-direction: column; text-decoration: none; color: inherit; background: #101013; border: 1px solid #222228; border-radius: 24px; overflow: hidden">
+          <figure class="slot grain" style="aspect-ratio: 16 / 10; border: 0; border-radius: 0">
+            <div class="slot-comp" aria-hidden="true" style="background: radial-gradient(120% 90% at 78% 40%, #4A1410 0%, #170B0A 55%, #0A0A0B 100%)">
+              <div style="position: absolute; left: 7cqw; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 2cqh; width: 54cqw">
+                <span class="m-loop m-rise" style="font-size: 9cqh; line-height: 1; font-weight: 700; letter-spacing: -.045em; color: #FFFFFF">Open a business account</span>
+                <span class="m-loop m-rise" style="animation-delay: .25s; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 10cqh; line-height: 1; color: #FF8A7E">in 10 minutes.</span>
+              </div>
+              <div class="mini-phone m-float" style="height: 82cqh; right: 8cqw; top: 9cqh">
+                <span class="mp-hello">Hello, Abdullah</span>
+                <span class="mp-bal">AED<b>420,500.00</b></span>
+                <span class="mp-card">Account setup<span class="mp-bar"><i class="m-loop" style="width: 100%; animation-name: m-fill"></i></span></span>
+              </div>
+            </div>
+            <video class="slot-video" data-src="assets/motion/e20-launch-loop.mp4" aria-label="E20 launch campaign loop"></video>
+            <span class="slot-tag">e20-launch-loop.mp4 · 16:10 · 1600×1000</span>
+          </figure>
+          <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex: 1">
+            <span style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #B4291F; border-radius: 999px; padding: 6px 12px">Launch campaign</span><span style="font-size: 12px; color: #D4D4D8; border: 1px solid #2E2E34; border-radius: 999px; padding: 6px 12px">Film · Social · Web</span></span>
+            <h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.025em; color: #FFFFFF">E20 launch campaign</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #A1A1AA">One promise carried from the product UI into a launch film, social cuts, feature graphics and a landing hero.</p>
+            <span style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF">View campaign
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Risk checks UI sequence -->
+        <div style="display: flex; flex-direction: column; background: #101013; border: 1px solid #222228; border-radius: 24px; overflow: hidden">
+          <figure class="slot" style="aspect-ratio: 16 / 10; border: 0; border-radius: 0">
+            <div class="slot-comp" aria-hidden="true" style="background: linear-gradient(160deg, #13235A 0%, #0B1638 100%)">
+              <div style="position: absolute; left: 9cqw; right: 9cqw; top: 12cqh; bottom: 0; background: #F3F5FA; border-radius: 2cqh 2cqh 0 0; padding: 4cqh; color: #111827; display: flex; flex-direction: column; gap: 2.4cqh; box-shadow: 0 -20px 60px rgba(0,0,0,.35)">
+                <span style="display: flex; justify-content: space-between; align-items: center"><b style="font-size: 3.6cqh; color: #0B1640">Harbour Line Trading LLC</b><span style="position: relative; font-size: 2.6cqh; font-weight: 600; border-radius: 1cqh; padding: 1.2cqh 2.4cqh; color: #FFFFFF; background: #9CA3AF"><span class="m-loop" style="animation-name: m-tick; position: absolute; inset: 0; border-radius: inherit; background: #1E6B2A"></span><span style="position: relative">Approve</span></span></span>
+                <span style="background: #FFFFFF; border: 1px solid #E3E6EF; border-radius: 1.4cqh; padding: 2cqh; display: flex; justify-content: space-between; font-size: 2.8cqh">1 · Omar K. Haddad<b class="m-loop" style="animation-name: m-tick; animation-delay: -3.2s; color: #1E6B2A">False positive</b></span>
+                <span style="background: #FFFFFF; border: 1px solid #E3E6EF; border-radius: 1.4cqh; padding: 2cqh; display: flex; justify-content: space-between; font-size: 2.8cqh">2 · Sara N. Malik<b class="m-loop" style="animation-name: m-tick; animation-delay: -2.2s; color: #1E6B2A">False positive</b></span>
+                <span style="background: #FFFFFF; border: 1px solid #E3E6EF; border-radius: 1.4cqh; padding: 2cqh; display: flex; justify-content: space-between; font-size: 2.8cqh">3 · Ahmed Saeed<b class="m-loop" style="animation-name: m-tick; animation-delay: -1.2s; color: #1E6B2A">False positive</b></span>
+              </div>
+            </div>
+            <video class="slot-video" data-src="assets/motion/risk-checks-sequence.mp4" aria-label="Risk Checks UI sequence"></video>
+            <span class="slot-tag">risk-checks-sequence.mp4 · 16:10 · 1600×1000</span>
+          </figure>
+          <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex: 1">
+            <span style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 12px; color: #D4D4D8; border: 1px solid #2E2E34; border-radius: 999px; padding: 6px 12px">UI animation</span><span style="font-size: 12px; color: #D4D4D8; border: 1px solid #2E2E34; border-radius: 999px; padding: 6px 12px">Product demo</span></span>
+            <h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.025em; color: #FFFFFF">Risk Checks UI sequence</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #A1A1AA">Every hit resolved, then approval unlocks: the product's core rule shown in a single loop.</p>
+            <a href="risk-checks.html" style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none">Read the case study
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- HRAR feature drop -->
+        <div style="display: flex; flex-direction: column; background: #101013; border: 1px solid #222228; border-radius: 24px; overflow: hidden">
+          <figure class="slot" style="aspect-ratio: 16 / 10; border: 0; border-radius: 0">
+            <div class="slot-comp" aria-hidden="true" style="background: linear-gradient(180deg, #1A1D27 0%, #0F1118 100%)">
+              <div class="m-loop" style="position: absolute; inset: 10cqh 8cqw 0; animation-name: m-zoom; transform-origin: 70% 40%">
+                <img src="assets/hrar-laptop-review.png" alt="" style="width: 100%; display: block">
+              </div>
+              <span class="m-loop m-pop" style="animation-delay: 1.6s; position: absolute; right: 7cqw; top: 9cqh; font-size: 2.8cqh; font-weight: 600; color: #0A0A0B; background: #FFFFFF; border-radius: 99px; padding: 1.4cqh 2.6cqh; box-shadow: 0 10px 30px rgba(0,0,0,.4)">New · Bulk review</span>
+            </div>
+            <video class="slot-video" data-src="assets/motion/hrar-feature-drop.mp4" aria-label="HRAR feature drop loop"></video>
+            <span class="slot-tag">hrar-feature-drop.mp4 · 16:10 · 1600×1000</span>
+          </figure>
+          <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex: 1">
+            <span style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 12px; color: #D4D4D8; border: 1px solid #2E2E34; border-radius: 999px; padding: 6px 12px">Feature drops</span><span style="font-size: 12px; color: #D4D4D8; border: 1px solid #2E2E34; border-radius: 999px; padding: 6px 12px">Changelog loops</span></span>
+            <h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.025em; color: #FFFFFF">HRAR feature drops</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #A1A1AA">Short, changelog-style loops that each explain one feature with a zoom, a cursor and a single line of copy.</p>
+            <a href="hrar.html" style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none">Read the case study
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- What I bring -->
   <section id="about" style="background: #F4F3EF; color: #0A0A0B">
     <div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-direction: column; gap: 56px">
@@ -213,5 +328,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #6E95FF;outline-offset:3p
     </div>
   </footer>
 </div>
+<script src="assets/motion.js"></script>
 </body>
 </html>
